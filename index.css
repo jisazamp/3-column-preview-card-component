@@ -58,7 +58,7 @@ p {
 .card {
     margin: 0 1em;
     padding: 2rem;
-    max-width: 50rem;
+    max-width: 30rem;
 }
 
 .card:first-child {
