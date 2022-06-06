@@ -19,6 +19,7 @@ body {
     font-family: var(--ff-lexend-deca);
     margin: 0;
     padding: 0;
+    background-color: var(--clr-very-light-gray);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -44,11 +45,12 @@ p {
 
 .container {
     display: flex;
-    background-color: var(--clr-very-light-gray);
+    justify-content: center;
 }
 
 .card-container {
     display: flex;
+    position: relative;
     flex-direction: column;
     margin: 2rem 0;
 }
@@ -85,6 +87,7 @@ p {
 
 .btn {
     margin-top: 1.5rem;
+    margin-bottom: 1rem;
     border: none;
     padding: 0.8rem 1.6rem;
     border-radius: 2rem;
@@ -99,7 +102,7 @@ p {
 #sedans .btn {
     color: var(--clr-bright-orange);
     font-family: var(--ff-lexend-deca);
-    border: 1px solid var(--clr-bright-orange);
+    border: 2px solid var(--clr-bright-orange);
 }
 
 #suvs {
@@ -109,7 +112,7 @@ p {
 #suvs .btn {
     color: var(--clr-dark-cyan);
     font-family: var(--ff-lexend-deca);
-    border: 1px solid var(--clr-dark-cyan);
+    border: 2px solid var(--clr-dark-cyan);
 }
 
 #luxury {
@@ -119,5 +122,55 @@ p {
 #luxury .btn {
     color: var(--clr-very-dark-cyan);
     font-family: var(--ff-lexend-deca);
-    border: 1px solid var(--clr-very-dark-cyan);
+    border: 2px solid var(--clr-very-dark-cyan);
+}
+
+@media (min-width: 60rem) {
+    .card-container {
+        flex-direction: row;
+        margin: 2rem 2rem;
+    }
+
+    .card:first-child {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.5rem;
+    }
+
+    .card:last-child {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.5rem;
+    }
+
+    .card {
+        max-width: 20rem;
+        height: 25rem;
+        margin: 0;
+    }
+
+    .btn {
+        position: absolute;
+        bottom: 5%;
+    }
+
+    .btn:hover {
+        transition: all .5s ease;
+    }
+
+    #sedans .btn:hover {
+        background-color: var(--clr-bright-orange);
+        border: 2px solid var(--clr-transparent-white);
+        color: var(--clr-transparent-white);
+    }
+
+    #suvs .btn:hover {
+        background-color: var(--clr-dark-cyan);
+        border: 2px solid var(--clr-transparent-white);
+        color: var(--clr-transparent-white);
+    }
+
+    #luxury .btn:hover {
+        background-color: var(--clr-very-dark-cyan);
+        border: 2px solid var(--clr-transparent-white);
+        color: var(--clr-transparent-white);
+    }
 }
