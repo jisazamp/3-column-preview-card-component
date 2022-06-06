@@ -1,0 +1,67 @@
+:root {
+    --clr-bright-orange: hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0; 
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.card {
+    padding: 2rem;
+}
+
+.card:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#sedans {
+    background-color: var(--clr-bright-orange);
+}
+
+#suvs {
+    background-color: var(--clr-dark-cyan);
+}
+
+#luxury {
+    background-color: var(--clr-very-dark-cyan);
+}
